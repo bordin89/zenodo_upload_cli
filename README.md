@@ -5,8 +5,11 @@ Uploading large files via the web interface of Zenodo often fails due to timeout
 I whipped up this procedure to do it directly from the CLI of any internet connected device. Bonus: no failed uploads, much faster uploads!
 
 Step 1) Get an access token from Zenodo: https://zenodo.org/account/settings/applications/tokens/new/
+
 Step 2) Create a new deposition or a draft update for an existing deposition.
+
 Step 3) Get the deposition ID from the address bar in your browser. For example: 13908086 
+
 Step 4) Using curl with your access token and deposition ID, retrieve the bucketID where the files are physically located on Zenodo.
 `curl https://zenodo.org/api/deposit/depositions/<YOURDEPOSITIONID>?access_token=<YOURACCESSTOKENHERE>`
 
